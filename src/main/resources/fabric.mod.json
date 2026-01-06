@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "block_substitutor",
+  "version": "\",
+  "name": "Block Substitutor",
+  "description": "Replaces 1.21 blocks with 1.20.1 equivalents on startup and chunk load (overworld only).",
+  "authors": ["Dave + Copilot"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.dave.blocksub.BlockSubMod"
+    ],
+    "modmenu": [
+      "com.dave.blocksub.client.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "block_substitutor.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "fabric-api": ">=0.92.6",
+    "minecraft": "1.20.1",
+    "cloth-config2": ">=11.1.106"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
