@@ -25,7 +25,7 @@ The wrapper is configured to use **Gradle 8.3** as specified in the requirements
 Java 17 is installed and properly configured:
 
 ```
-openjdk version "17.0.17" 2025-10-21
+openjdk version "17.0.17" 2023-10-17
 OpenJDK Runtime Environment Temurin-17.0.17+10 (build 17.0.17+10)
 OpenJDK 64-Bit Server VM Temurin-17.0.17+10 (build 17.0.17+10, mixed mode, sharing)
 ```
