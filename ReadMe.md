@@ -27,6 +27,25 @@ Source: https://github.com/Kishku7/BlockSubstitutor
 
 ---
 
+## Supported Versions
+
+This mod is built for and tested on the following versions:
+
+| Component       | Version         |
+|-----------------|-----------------|
+| Minecraft       | 1.20.1          |
+| Fabric Loader   | 0.14.19+        |
+| Fabric API      | 0.92.0+1.20.1   |
+| Cloth Config    | 11.1.106        |
+| Mod Menu        | 7.2.2           |
+| Java            | 17              |
+
+**Requirements:**
+- **Java 17** is required to build and run this mod
+- Fabric Loader version 0.14.19 or newer recommended
+
+---
+
 ## How It Works
 
 Block Substitutor intercepts block loads and replaces blocks that do not exist in 1.20.1 with
@@ -135,6 +154,99 @@ Missing blockstate properties are logged once per block pair to avoid spam.
 - Safe for servers and modpacks
 - Does not modify or add blocks
 - Can run server-side without requiring clients to install the mod
+
+---
+
+## Building the Mod
+
+To build the mod from source, you'll need:
+
+- **Java 17** or newer
+- **Git** (to clone the repository)
+
+### Build Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kishku7/BlockSubstitutor.git
+   cd BlockSubstitutor
+   ```
+
+2. Build the mod using the Gradle wrapper:
+   
+   **On Linux/Mac:**
+   ```bash
+   ./gradlew build
+   ```
+   
+   **On Windows:**
+   ```cmd
+   gradlew build
+   ```
+
+3. Find the built JAR file:
+   ```
+   build/libs/blocksubstitutor-1.0.0.jar
+   ```
+
+The build process will compile the mod, run any tests, and package everything into a JAR file ready for use.
+
+---
+
+## Development Environment
+
+### Running in Development Mode
+
+The mod uses Fabric Loom for development. You can run the mod directly without building a JAR:
+
+**Run Minecraft Client:**
+```bash
+./gradlew runClient
+```
+
+**Run Minecraft Server:**
+```bash
+./gradlew runServer
+```
+
+### IDE Setup
+
+#### IntelliJ IDEA / Android Studio
+
+1. Open IntelliJ IDEA
+2. Select **File → Open**
+3. Navigate to the BlockSubstitutor directory and select it
+4. IntelliJ will automatically detect it as a Gradle project and import it
+5. Wait for Gradle sync to complete
+6. Run configurations will be automatically generated:
+   - **Fabric Client** - Launches the Minecraft client
+   - **Fabric Server** - Launches the Minecraft server
+
+#### Eclipse
+
+1. Open Eclipse
+2. Select **File → Import → Gradle → Existing Gradle Project**
+3. Navigate to the BlockSubstitutor directory
+4. Follow the import wizard
+5. After import, run configurations will be available in the Run menu
+
+#### Visual Studio Code
+
+1. Open VS Code
+2. Install the "Extension Pack for Java" if not already installed
+3. Open the BlockSubstitutor folder
+4. VS Code will detect the Gradle project and configure it automatically
+5. Use the Gradle tasks view to run `runClient` or `runServer`
+
+### Gradle Tasks
+
+Common Gradle tasks for development:
+
+- `./gradlew build` - Build the mod
+- `./gradlew clean` - Clean build artifacts
+- `./gradlew runClient` - Run the Minecraft client
+- `./gradlew runServer` - Run the Minecraft server
+- `./gradlew genSources` - Generate Minecraft source code for reference
 
 ---
 
