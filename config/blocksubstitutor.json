@@ -1,0 +1,6 @@
+{
+  "replacementMode": "LOAD_ALL_DIMENSIONS",
+  "substitutions": {
+    "minecraft:copper_block": "minecraft:iron_block"
+  }
+}

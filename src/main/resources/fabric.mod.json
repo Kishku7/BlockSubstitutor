@@ -1,30 +1,37 @@
 {
-  "schemaVersion": 1,
-  "id": "block_substitutor",
-  "version": "\",
-  "name": "Block Substitutor",
-  "description": "Replaces 1.21 blocks with 1.20.1 equivalents on startup and chunk load (overworld only).",
-  "authors": ["Dave + Copilot"],
-  "license": "MIT",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.dave.blocksub.BlockSubMod"
+    "schemaVersion": 1,
+    "id": "blocksubstitutor",
+    "version": "1.0.0",
+
+    "name": "Block Substitutor",
+    "description": "Automatically replaces unsupported 1.21.x blocks with safe 1.20.1 equivalents.",
+    "authors": [
+        "Kishku7"
     ],
-    "modmenu": [
-      "com.dave.blocksub.client.ModMenuIntegration"
-    ]
-  },
-  "mixins": [
-    "block_substitutor.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.18.4",
-    "fabric-api": ">=0.92.6",
-    "minecraft": "1.20.1",
-    "cloth-config2": ">=11.1.106"
-  },
-  "suggests": {
-    "modmenu": "*"
-  }
+    "contact": {
+        "homepage": "https://github.com/Kishku7/BlockSubstitutor/wiki",
+        "sources": "https://github.com/Kishku7/BlockSubstitutor"
+    },
+
+    "license": "Apache-2.0",
+    "icon": "assets/blocksubstitutor/icon.png",
+
+    "environment": "*",
+
+    "entrypoints": {
+        "main": [
+            "com.zxese.blocksubstitutor.BlockSubstitutor"
+        ],
+        "modmenu": [
+            "com.zxese.blocksubstitutor.BlockSubstitutorModMenu"
+        ]
+    },
+
+    "depends": {
+        "fabricloader": ">=0.14.21",
+        "fabric": "*",
+        "minecraft": "1.20.1",
+        "cloth-config2": "*",
+        "modmenu": "*"
+    }
 }
