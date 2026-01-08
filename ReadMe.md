@@ -1,8 +1,7 @@
 # Block Substitutor
 
 Block Substitutor is a lightweight, server-friendly downgrade compatibility mod for Minecraft 1.20.1.
-It automatically replaces unsupported 1.21.x blocks with safe 1.20.1 equivalents during world load,
-chunk load, and optional startup scanning.
+It automatically replaces unsupported 1.21.x blocks with safe 1.20.1 equivalents during chunk load.
 
 This mod is designed for players and servers who want to use worlds generated in newer versions of
 Minecraft while staying on 1.20.1 for modpack stability or performance reasons.
@@ -19,7 +18,6 @@ Source: https://github.com/Kishku7/BlockSubstitutor
 - Full blockstate property preservation (where compatible)
 - Block entity NBT preservation
 - Chunk-load scanning (always enabled)
-- Optional startup scan across all loaded chunks in all dimensions
 - Configurable replacement mappings
 - Configurable logging
 - Mod Menu + Cloth Config integration
@@ -73,11 +71,10 @@ A defaults file is bundled with the mod:
 
 ### Config Options
 
-| Option                   | Type    | Default | Description                                                        |
-|--------------------------|---------|---------|--------------------------------------------------------------------|
-| `scanOverworldOnStartup` | boolean | false   | Scans all loaded chunks in all dimensions when the server starts. |
-| `logReplacements`        | boolean | true    | Logs a summary of replacements per chunk.                          |
-| `blockMappings`          | object  | varies  | Mapping of source block IDs to replacement block IDs.             |
+| Option            | Type    | Default | Description                                              |
+|-------------------|---------|---------|----------------------------------------------------------|
+| `logReplacements` | boolean | true    | Logs a summary of replacements per chunk.                |
+| `blockMappings`   | object  | varies  | Mapping of source block IDs to replacement block IDs.    |
 
 ### Editing the Config
 
