@@ -1,1 +1,19 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (pluginRequest.id.id == 'fabric-loom') {
+                useModule("net.fabricmc:fabric-loom:${pluginRequest.version}")
+            }
+        }
+    }
+}
+
 rootProject.name = 'BlockSubstitutor'
