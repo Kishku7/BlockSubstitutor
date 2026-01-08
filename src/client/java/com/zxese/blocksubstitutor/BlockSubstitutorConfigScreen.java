@@ -11,8 +11,6 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 
-import java.util.HashMap;
-
 /**
  * BlockSubstitutorConfigScreen
  *
@@ -55,30 +53,6 @@ public final class BlockSubstitutorConfigScreen {
                         .setSaveConsumer(config::setLogReplacements)
                         .build()
         );
-
-        // ---------------------------------------------------------
-        // Block Mappings Category
-        // ---------------------------------------------------------
-        ConfigCategory mappings = builder.getOrCreateCategory(
-                Text.literal("Block Mappings")
-        );
-
-        config.getBlockMappings().forEach((source, replacement) -> {
-            mappings.addEntry(
-                    entryBuilder.startStrField(
-                                    Text.literal("Replace " + source),
-                                    replacement
-                            )
-                            .setDefaultValue(replacement)
-                            .setSaveConsumer(newValue -> {
-                                HashMap<String, String> map =
-                                        new HashMap<>(config.getBlockMappings());
-                                map.put(source, newValue);
-                                config.setBlockMappings(map);
-                            })
-                            .build()
-            );
-        });
 
         // ---------------------------------------------------------
         // Save Action
