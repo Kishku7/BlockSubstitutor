@@ -19,7 +19,6 @@ Source: https://github.com/Kishku7/BlockSubstitutor
 - Full blockstate property preservation (where compatible)
 - Block entity NBT preservation
 - Chunk-load scanning (always enabled)
-- Optional startup scan across all loaded chunks in all dimensions
 - Configurable replacement mappings
 - Configurable logging
 - Mod Menu + Cloth Config integration

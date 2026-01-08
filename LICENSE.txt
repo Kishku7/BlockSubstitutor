@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Apache License, Version 2.0
 
 Copyright 2025 Kishku7
@@ -13,3 +14,20 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+=======
+Block Substitutor Custom License
+
+Copyright (c) 2025 Kishku7
+
+Permission is granted to any person to use, copy, modify, merge,
+publish, and distribute this software, provided that:
+
+1. The software may not be sold, licensed for a fee, or included in
+   any commercial product, service, or paid distribution.
+
+2. Redistributions must include this license.
+
+3. Attribution to the original author (Kishku7) must be maintained.
+
+This software is provided "as is", without warranty of any kind.
+>>>>>>> eda7b6970d11c0d28ccbcbc89dbc235b17a3d052
